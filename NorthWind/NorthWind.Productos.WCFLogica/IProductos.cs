@@ -14,12 +14,19 @@ namespace NorthWind.Productos.WCFLogica
     {
 
         [OperationContract]
+        bool LaFechaEsFeriada(DateTime laFecha);
+
+        [OperationContract]
+        double CalcularSalarioPorHora(int elNumeroDeEmpleado);
+
+        [OperationContract]
         string GetData(int value);
 
         [OperationContract]
         CompositeType GetDataUsingDataContract(CompositeType composite);
 
-        // TODO: agregue aquí sus operaciones de servicio
+        [OperationContract]
+        double ObtenerHorasLaboradas(int elNumeroDeEmpleado, DateTime fechaInicial, DateTime fechaFinal);
     }
 
 
