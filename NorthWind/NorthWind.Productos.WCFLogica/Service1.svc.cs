@@ -52,5 +52,16 @@ namespace NorthWind.Productos.WCFLogica.IProductos
         {
             throw new NotImplementedException();
         }
+
+        public bool LaCategoriaEs(string categoryName)
+        {
+            var laAccion = new Acciones.CalculoCategoria();
+            var elResult = laAccion.LaCategoriaEs(categoryName);
+            return elResult;
+        }
+        double ICategorias.Categoria(int CategoryID, string CategoryName, string Description)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

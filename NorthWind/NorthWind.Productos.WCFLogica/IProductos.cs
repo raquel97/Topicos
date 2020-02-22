@@ -13,6 +13,8 @@ namespace NorthWind.Productos.WCFLogica.IProductos
     public interface IProductos
     {
 
+         // declaración del metodo en el IService que luego sera utilizado en la clase 
+         // acciones
         [OperationContract]
         bool ElProductoEs(string productName);
 
@@ -27,6 +29,7 @@ namespace NorthWind.Productos.WCFLogica.IProductos
 
         [OperationContract]
         double Producto(int productID, string productName, string categoryName, string description, decimal unitPrice);
+
     }
 
 
