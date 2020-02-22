@@ -27,6 +27,7 @@ namespace NorthWind.Productos.WCFLogica.IProductos
 
         [OperationContract]
         double Producto(int productID, string productName, string categoryName, string description, decimal unitPrice);
+
     }
 
 
