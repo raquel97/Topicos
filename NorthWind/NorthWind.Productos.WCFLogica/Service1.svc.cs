@@ -43,6 +43,12 @@ namespace NorthWind.Productos.WCFLogica.IProductos
             return elResult;
         }
 
+        public bool LaCompaniaDelProducto(string CompaniaName)
+        {
+            var laAccion = new Acciones.Calculos();
+            var elResult = laAccion.LaCompaniaDelProducto(CompaniaName);
+            return elResult;
+        }
 
         double IProductos.Producto(int productID, string productName, string categoryName, string description, decimal unitPrice)
         {

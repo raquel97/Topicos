@@ -21,6 +21,17 @@ namespace NorthWind.Productos.WCFLogica.Acciones
         {
             var elResult = null;
             if (productName)
+            {
+            
+            }
+            return elResult;
+        }
+
+        public bool LaCompaniaDelProducto(string CompaniaName)
+        {
+            var elResult = false;
+            var compania = CompaniaName.Suppliers;
+            return elResult;
 
         }
     }
