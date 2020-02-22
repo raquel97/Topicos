@@ -43,6 +43,11 @@ namespace NorthWind.Productos.WCFLogica.IProductos
             return elResult;
         }
 
+        public string CiudadDeProcedenciaDeProducto(string productName)
+        {
+
+        }
+
         double IProductos.Producto(int productID, string productName, string categoryName, string description, decimal unitPrice)
         {
             throw new NotImplementedException();
