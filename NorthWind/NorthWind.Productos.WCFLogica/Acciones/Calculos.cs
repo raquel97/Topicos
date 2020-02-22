@@ -7,7 +7,7 @@ namespace NorthWind.Productos.WCFLogica.Acciones
 {
     internal class Calculos
     {
-        
+        // metodo que permite devolver si un producto existe mediante condiciones
         public bool ElProductoEs(string productName)
         {
             var elResult = false;
