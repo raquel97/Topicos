@@ -20,6 +20,7 @@ namespace NorthWind.Productos.WCFLogica.Acciones
         public string CiudadDeProcedenciaDeProducto(string productName)
         {
             var elResult = null;
+            if (productName)
 
         }
     }
