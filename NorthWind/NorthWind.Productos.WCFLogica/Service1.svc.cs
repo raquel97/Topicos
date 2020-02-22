@@ -38,7 +38,7 @@ namespace NorthWind.Productos.WCFLogica
 
         public bool LaFechaEsFeriada(DateTime laFecha)
         {
-            var laAccion = new Acciones.CalculoDeFechas();
+            var laAccion = new Acciones.Calculos();
             var elResultado = laAccion.LaFechaEsFeriada(laFecha);
             return elResultado;
         }
