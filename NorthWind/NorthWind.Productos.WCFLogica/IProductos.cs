@@ -6,7 +6,7 @@ using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
 
-namespace NorthWind.Productos.WCFLogica
+namespace NorthWind.Productos.WCFLogica.IProductos
 {
     // NOTA: puede usar el comando "Rename" del menú "Refactorizar" para cambiar el nombre de interfaz "IService1" en el código y en el archivo de configuración a la vez.
     [ServiceContract]
@@ -14,10 +14,10 @@ namespace NorthWind.Productos.WCFLogica
     {
 
         [OperationContract]
-        bool LaFechaEsFeriada(DateTime laFecha);
+        bool ElProductoEs(string productName);
 
         [OperationContract]
-        double CalcularSalarioPorHora(int elNumeroDeEmpleado);
+        double PrecioPorUnidad(decimal UnitPrice);
 
         [OperationContract]
         string GetData(int value);
@@ -26,7 +26,7 @@ namespace NorthWind.Productos.WCFLogica
         CompositeType GetDataUsingDataContract(CompositeType composite);
 
         [OperationContract]
-        double ObtenerHorasLaboradas(int elNumeroDeEmpleado, DateTime fechaInicial, DateTime fechaFinal);
+        double Producto(int productID, string productName, string categoryName, string description, decimal unitPrice);
     }
 
 

@@ -6,14 +6,14 @@ using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
 
-namespace NorthWind.Productos.WCFLogica
+namespace NorthWind.Productos.WCFLogica.IProductos
 {
     // NOTA: puede usar el comando "Rename" del menú "Refactorizar" para cambiar el nombre de clase "Service1" en el código, en svc y en el archivo de configuración.
     // NOTE: para iniciar el Cliente de prueba WCF para probar este servicio, seleccione Service1.svc o Service1.svc.cs en el Explorador de soluciones e inicie la depuración.
     public class Service1 : IProductos
     {
 
-        public double CalcularSalarioPorHora(int elNumeroDeEmpleado)
+        public double PrecioPorUnidad(decimal UnitPrice)
         {
             throw new NotImplementedException();
         }
@@ -36,14 +36,14 @@ namespace NorthWind.Productos.WCFLogica
             return composite;
         }
 
-        public bool LaFechaEsFeriada(DateTime laFecha)
+        public bool ElProductoEs(string productName)
         {
             var laAccion = new Acciones.Calculos();
-            var elResultado = laAccion.LaFechaEsFeriada(laFecha);
-            return elResultado;
+            var elResult = laAccion.ElProductoEs(productName);
+            return elResult;
         }
 
-        public double ObtenerHorasLaboradas(int elNumeroDeEmpleado, DateTime fechaInicial, DateTime fechaFinal)
+        double IProductos.Producto(int productID, string productName, string categoryName, string description, decimal unitPrice)
         {
             throw new NotImplementedException();
         }

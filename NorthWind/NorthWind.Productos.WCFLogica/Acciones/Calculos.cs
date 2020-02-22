@@ -7,13 +7,13 @@ namespace NorthWind.Productos.WCFLogica.Acciones
 {
     internal class Calculos
     {
-        public bool LaFechaEsFeriada(DateTime laFecha)
+        public bool ElProductoEs(string productName)
         {
-            var elResultado = false;
-            var elDiaDeLaSemana = laFecha.DayOfWeek;
-            if (elDiaDeLaSemana == DayOfWeek.Sunday || elDiaDeLaSemana == DayOfWeek.Saturday)
-                elResultado = true;
-            return elResultado;
+            var elResult = false;
+            var product = productName.DayOfWeek;
+            if (product == DayOfWeek.Sunday || product == DayOfWeek.Saturday)
+                elResult = true;
+            return elResult;
         }
     }
 }
