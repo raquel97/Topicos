@@ -32,6 +32,12 @@ namespace NorthWind.Productos.WCFLogica.IProductos
         
         [OperationContract]
         bool LaCompaniaDelProducto(string CompaniaName);
+
+        [OperationContract]
+        string CiudadDeProcedenciaDeProducto(string productName);
+
+        [OperationContract]
+        int ProductoEnStock(string NameProudct);
     }
 
 

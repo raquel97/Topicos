@@ -27,6 +27,15 @@ namespace NorthWind.Productos.WCFLogica.Acciones
             return elResult;
         }
 
+        public int ProductoEnStock(string NameProudct)
+        {
+            var elResult = null;
+            var producto = NameProudct.Products;
+            if(producto == ProductName.Products)
+                elResult = true;
+            return elResult;
+        }
+
         public bool LaCompaniaDelProducto(string CompaniaName)
         {
             var elResult = false;
