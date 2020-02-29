@@ -16,10 +16,7 @@ namespace NorthWind.Productos.WCFLogica.IProductos
          // declaración del metodo en el IService que luego sera utilizado en la clase 
          // acciones
         [OperationContract]
-        bool ElProductoEs(string productName);
-
-        [OperationContract]
-        double PrecioPorUnidad(decimal UnitPrice);
+        bool LaCategoriaEs(string NombreCategoria);
 
         [OperationContract]
         string GetData(int value);
@@ -27,11 +24,7 @@ namespace NorthWind.Productos.WCFLogica.IProductos
         [OperationContract]
         CompositeType GetDataUsingDataContract(CompositeType composite);
 
-        [OperationContract]
-        double Producto(int productID, string productName, string categoryName, string description, decimal unitPrice);
-        
-        [OperationContract]
-        bool LaCompaniaDelProducto(string CompaniaName);
+
     }
 
 
