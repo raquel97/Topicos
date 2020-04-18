@@ -155,6 +155,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Northwind.cs" />
     <Compile Include="Models\SuppliersNorthWind.cs" />
     <Compile Include="Northwind.Context.cs">
       <AutoGen>True</AutoGen>
