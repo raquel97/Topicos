@@ -138,6 +138,9 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Web.config" />
+    <Content Include="Views\Proveedores\Index.cshtml" />
+    <Content Include="Views\Proveedores\Crear.cshtml" />
+    <Content Include="Views\Proveedores\Modificar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -207,7 +210,6 @@
     <Folder Include="App_Data\" />
     <Folder Include="Views\Categorias\" />
     <Folder Include="Views\NorthWind\" />
-    <Folder Include="Views\Proveedores\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
