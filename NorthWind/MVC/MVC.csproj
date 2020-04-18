@@ -141,6 +141,9 @@
     <Content Include="Views\Proveedores\Index.cshtml" />
     <Content Include="Views\Proveedores\Crear.cshtml" />
     <Content Include="Views\Proveedores\Modificar.cshtml" />
+    <Content Include="Views\NorthWind\Index.cshtml" />
+    <Content Include="Views\NorthWind\Crear.cshtml" />
+    <Content Include="Views\NorthWind\Modificar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -210,7 +213,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Categorias\" />
-    <Folder Include="Views\NorthWind\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

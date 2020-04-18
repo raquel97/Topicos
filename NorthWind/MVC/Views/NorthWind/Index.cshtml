@@ -1,0 +1,54 @@
+﻿@model List<MVC.Models.Northwind>
+@{
+    /**/
+
+    ViewBag.Title = "NorthWindMVC";
+}
+
+<h2>Información sobre los productos</h2>
+
+<a class="btn btn-success" href="/NorthWind/Crear">Añadir</a>
+
+<div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th> </th>
+                <th>Producto</th>
+                <th>Categoría</th>
+                <th>Precio</th>
+                <th>Stock</th>
+                <th>Compañía</th>
+                <th>País</th>
+                <th>Código Postal</th>
+                <th>Dirección</th>
+                <th>Teléfono</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var x in Model)
+            {
+                <tr>
+                    <th>@x.ProductID</th>
+                    <th>@x.ProductName</th>
+                    <th>@x.CategoryName</th>
+                    <th>@x.UnitPrice</th>
+                    <th>@x.UnitsInStock</th>
+                    <th>@x.CompanyName</th>
+                    <th>@x.Country</th>
+                    <th>@x.PostalCode</th>
+                    <th>@x.Address</th>
+                    <th>@x.Phone</th>
+                    <th>
+                        <a class="btn btn-default" href="~/NortWind/Modificar?id=@x.ProductID">Modificar</a>
+                        <a class="btn btn-danger" href="/NorthWind/Eliminar?id=@x.ProductID">Eliminar</a>
+
+                    </th>
+                </tr>
+            }
+
+        </tbody>
+
+    </table>
+</div>
