@@ -1,7 +1,48 @@
-﻿
+﻿@model List<MVC.Models.SuppliersNorthWind>
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Proveedores";
 }
 
-<h2>Index</h2>
+<h2>Información sobre los proveedores</h2>
 
+<a class="btn btn-success" href="/Proveedores/Crear">Añadir</a>
+
+<div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th> </th>
+                <th>Compañía</th>
+                <th>Contacto</th>
+                <th>Ocupación</th>
+                <th>Dirección</th>
+                <th>Ciudad</th>
+                <th>Código Postal</th>
+                <th>País</th>
+                <th>Teléfono</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var x in Model)
+            {
+                <tr>
+                    <th>@x.SupplierID</th>
+                    <th>@x.CompanyName</th>
+                    <th>@x.ContactName</th>
+                    <th>@x.ContactTitle</th>
+                    <th>@x.Address</th>
+                    <th>@x.City</th>
+                    <th>@x.PostalCode</th>
+                    <th>@x.Country</th>
+                    <th>@x.Phone</th>
+                    <th>
+                        <a class="btn btn-default" href="~/Proveedores/Modificar?id=@x.SupplierID">Modificar</a>
+                        <a class="btn btn-danger" href="/Proveedores/Eliminar?id=@x.SupplierID">Eliminar</a>
+
+                    </th>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

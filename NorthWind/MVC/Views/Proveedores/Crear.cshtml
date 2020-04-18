@@ -1,7 +1,89 @@
-﻿
+﻿@model MVC.Models.SuppliersNorthWind
 @{
-    ViewBag.Title = "Crear";
+    ViewBag.Title = "Añadir";
 }
 
-<h2>Crear</h2>
+<h2>Añadir Proveedor</h2>
+
+<form method="post" action="/Proveedores/Crear">
+
+    <div class="form-horizontal">
+        <h4>Ingresar Proveedor</h4>
+        <hr />
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.CompanyName, htmlAttributes: new { @class = "control-label col-md-2" })
+
+            <div class="col-md-10">
+                @Html.TextBoxFor(m => m.CompanyName, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.CompanyName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.ContactName, htmlAttributes: new { @class = "control-label col-md-2" })
+
+            <div class="col-md-10">
+                @Html.TextBoxFor(m => m.ContactName, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.ContactName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.ContactTitle, htmlAttributes: new { @class = "control-label col-md-2" })
+
+            <div class="col-md-10">
+                @Html.TextBoxFor(m => m.ContactTitle, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.ContactTitle, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.Address, htmlAttributes: new { @class = "control-label col-md-2" })
+
+            <div class="col-md-10">
+                @Html.TextBoxFor(m => m.Address, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.Address, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.City, htmlAttributes: new { @class = "control-label col-md-2" })
+
+            <div class="col-md-10">
+                @Html.TextBoxFor(m => m.City, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.City, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.PostalCode, htmlAttributes: new { @class = "control-label col-md-2" })
+
+            <div class="col-md-10">
+                @Html.TextBoxFor(m => m.PostalCode, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.PostalCode, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.Country, htmlAttributes: new { @class = "control-label col-md-2" })
+
+            <div class="col-md-10">
+                @Html.TextBoxFor(m => m.Country, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.Country, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.Phone, htmlAttributes: new { @class = "control-label col-md-2" })
+
+            <div class="col-md-10">
+                @Html.TextBoxFor(m => m.Phone, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.Phone, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <button type="submit" class="btn btn-success">Guardar</button>
+    </div>
+
+</form>
 
