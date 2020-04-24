@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -10,13 +10,15 @@ namespace MVC.Models
     {
         public int ProductID { get; set; }
 
+		// Modelo del MVC para el proyecto Northwind
+
         [Display(Name = "Producto")]
         [Required(ErrorMessage = "Debe ingresar el nombre del producto")]
         //[StringLength(15, ErrorMessage = "El nombre no debe exceder los")]
         public string ProductName { get; set; }
 
-        [Display(Name = "CategorÃ­a")]
-        [Required(ErrorMessage = "Debe ingresar la categorÃ­a del producto")]
+        [Display(Name = "Categoría")]
+        [Required(ErrorMessage = "Debe ingresar la categoría del producto")]
         public string CategoryName { get; set; }
 
         [Display(Name = "Precio")]
@@ -27,24 +29,24 @@ namespace MVC.Models
         [Required(ErrorMessage = "Debe ingresar el stock del producto")]
         public short? UnitsInStock { get; set; }
 
-        [Display(Name = "CompaÃ±Ã­a")]
-        [Required(ErrorMessage = "Debe ingresar la compaÃ±Ã­a del producto")]
+        [Display(Name = "Compañía")]
+        [Required(ErrorMessage = "Debe ingresar la compañía del producto")]
         public string CompanyName { get; set; }
 
-        [Display(Name = "PaÃ­s")]
-        [Required(ErrorMessage = "Debe ingresar el paÃ­s del producto")]
+        [Display(Name = "País")]
+        [Required(ErrorMessage = "Debe ingresar el país del producto")]
         public string Country { get; set; }
 
-        [Display(Name = "CÃ³digo Postal")]
-        [Required(ErrorMessage = "Debe ingresar el cÃ³digo postal")]
+        [Display(Name = "Código Postal")]
+        [Required(ErrorMessage = "Debe ingresar el código postal")]
         public string PostalCode { get; set; }
 
-        [Display(Name = "DirecciÃ³n")]
-        [Required(ErrorMessage = "Debe ingresar la direcciÃ³n de la compaÃ±Ã­a")]
+        [Display(Name = "Dirección")]
+        [Required(ErrorMessage = "Debe ingresar la dirección de la compañía")]
         public string Address { get; set; }
 
-        [Display(Name = "TelÃ©fono")]
-        [Required(ErrorMessage = "Debe ingresar el telÃ©fono de la compaÃ±Ã­a")]
+        [Display(Name = "Teléfono")]
+        [Required(ErrorMessage = "Debe ingresar el teléfono de la compañía")]
         public string Phone { get; set; }
     }
 }
