@@ -1,7 +1,61 @@
-﻿
+﻿@*@model PagedList.IPagedList<MVC.Models.CategoriesNorthWind>*@
+@using PagedList.Mvc;
+
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+
 @{
+
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+@*@{
+        Layout = null;
+    }*@
 
+<h2>Información sobre las categorias</h2>
+
+<a class="btn btn-success" href="/Categorias/Crear">Añadir Categoría</a>
+
+<h2> </h2>
+
+@using (Html.BeginForm())
+{
+    <p>
+        Buscar Categoría: @Html.TextBox("SearchString")
+        <input type="submit" value="Buscar" />
+    </p>
+}
+
+<table class="table">
+    <tr>
+
+        <th>
+            @Html.ActionLink("ID", "Index", new { sortOrder = ViewBag.DateSortParm })
+        </th>
+
+        <th>
+            @Html.ActionLink("Categoría", "Index", new { sortOrder = ViewBag.NameSortParm })
+        </th>
+        <th>
+            Descripción
+        </th>
+
+        @*<th></th>*@
+    </tr>
+
+    @foreach (var x in Model)
+    {
+        <tr>
+            <th>@x.CategoryID</th>
+            <th>@x.CategoryName</th>
+            <th>@x.Description</th>
+            <th>
+                <a class="btn btn-default" href="~/Categorias/Modificar?id=@x.CategoryID">Modificar</a>
+                <a class="btn btn-danger" href="/Categorias/Eliminar?id=@x.CategoryID">Eliminar</a>
+
+            </th>
+        </tr>
+    }
+</table>
+@*Page@(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+    @Html.PagedListPager(Model, page => Url.Action("Index", new { page }))*@
