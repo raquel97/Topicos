@@ -6,7 +6,7 @@ using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
 
-namespace NorthWind.Productos.WCFLogica.IProductos
+namespace NorthWind.Productos.WCFLogica
 {
     // NOTA: puede usar el comando "Rename" del menú "Refactorizar" para cambiar el nombre de interfaz "IService1" en el código y en el archivo de configuración a la vez.
     [ServiceContract]
@@ -16,10 +16,13 @@ namespace NorthWind.Productos.WCFLogica.IProductos
          // declaración del metodo en el IService que luego sera utilizado en la clase 
          // acciones
         [OperationContract]
-        bool ElProductoEs(string productName);
+        bool ProductoSeSigueFabricando(bool Descontin);
 
         [OperationContract]
-        double PrecioPorUnidad(decimal UnitPrice);
+        double PrecioPorUnidad(decimal PrecioUnitario);
+
+        [OperationContract]
+        string NombreProducto(string NombreDelProducto);
 
         [OperationContract]
         string GetData(int value);
@@ -28,16 +31,8 @@ namespace NorthWind.Productos.WCFLogica.IProductos
         CompositeType GetDataUsingDataContract(CompositeType composite);
 
         [OperationContract]
-        double Producto(int productID, string productName, string categoryName, string description, decimal unitPrice);
-        
-        [OperationContract]
-        bool LaCompaniaDelProducto(string CompaniaName);
+        string SeEncuentraElProducto(string NombreDelProducto, int PrecioUnitario);
 
-        [OperationContract]
-        string CiudadDeProcedenciaDeProducto(string productName);
-
-        [OperationContract]
-        int ProductoEnStock(string NameProudct);
     }
 
 

@@ -13,7 +13,12 @@ namespace NorthWind.Productos.WCFLogica.IProductos
     public class Service1 : IProductos
     {
 
-        public double PrecioPorUnidad(decimal UnitPrice)
+        public double PrecioPorUnidad(decimal PrecioUnitario)
+        {
+            throw new NotImplementedException();
+        }
+
+        public string NombreProducto(string NombreDelProducto)
         {
             throw new NotImplementedException();
         }
@@ -36,32 +41,14 @@ namespace NorthWind.Productos.WCFLogica.IProductos
             return composite;
         }
 
-        public bool ElProductoEs(string productName)
+        public bool ProductoSeSigueFabricando(bool Descontin)
         {
             var laAccion = new Acciones.Calculos();
-            var elResult = laAccion.ElProductoEs(productName);
-            return elResult;
+            var elResultado = laAccion.ProductoSeSigueFabricando(Descontin);
+            return elResultado;
         }
 
-        public bool LaCompaniaDelProducto(string CompaniaName)
-        {
-            var laAccion = new Acciones.Calculos();
-            var elResult = laAccion.LaCompaniaDelProducto(CompaniaName);
-            return elResult;
-        }
-
-        double IProductos.Producto(int productID, string productName, string categoryName, string description, decimal unitPrice)
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool LaCategoriaEs(string categoryName)
-        {
-            var laAccion = new Acciones.CalculoCategoria();
-            var elResult = laAccion.LaCategoriaEs(categoryName);
-            return elResult;
-        }
-        double ICategorias.Categoria(int CategoryID, string CategoryName, string Description)
+        public string SeEncuentraElProducto(string NombreDelProducto, int PrecioUnitario)
         {
             throw new NotImplementedException();
         }
