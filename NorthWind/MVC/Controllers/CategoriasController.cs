@@ -23,7 +23,6 @@ namespace MVC.Controllers
             if (!String.IsNullOrEmpty(searchString))
             {
                 lista = lista.Where(s => s.CategoryName.Contains(searchString));
-                                       //|| s.FirstMidName.Contains(searchString));
             }
             switch (sortOrder)
             {
