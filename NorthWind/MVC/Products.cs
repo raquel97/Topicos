@@ -12,6 +12,7 @@ namespace MVC
     using System;
     using System.Collections.Generic;
     
+    //Declaraciòn de metodos en clase parcial
     public partial class Products
     {
         public int ProductID { get; set; }
